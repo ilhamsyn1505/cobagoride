@@ -6,7 +6,7 @@ echo color("green"," Claim Voucher \n");
 echo color("green"," Auto Create & Redeem Voucher \n");
 echo color("green"," =================================== \n");
 echo " Created by : GARONG \n";
-echo " Version    : 001 \n";
+echo " Update    : 24Feb20 \n";
 echo " Time       : ".date('d-m-Y||H:i:s')." \n";
 echo color("green"," =================================== \n");
 
@@ -56,7 +56,7 @@ echo color("green"," =================================== \n");
 				save("token.txt",$token);
 				
 				echo color("green","\n===========(REDEEM VOUCHER)===========");
-				echo "\n".color("yellow","!] Claim Voc ");
+				echo "\n".color("yellow","!] Claim Voc FOOD1");
 				echo "\n".color("yellow","!] Please wait...");
 				for($a=1;$a<=3;$a++){
 					echo color("yellow",".");
@@ -70,7 +70,7 @@ echo color("green"," =================================== \n");
 				}else{
 					echo "\n".color("red","-] Message: ".$message);
 					
-					echo "\n".color("yellow","!] Claim Voc GOFOOD021120A");
+					echo "\n".color("yellow","!] Claim Voc FOOD2");
 					echo "\n".color("yellow","!] Please wait...");
 					for($a=1;$a<=3;$a++){
 						echo color("yellow",".");
@@ -86,18 +86,18 @@ echo color("green"," =================================== \n");
 						echo "\n".color("red","-] Message: ".$messageboba10);
 					}
 					goride:
-					echo "\n".color("yellow","!] Claim Voc AYOCOBAGOJEK");
+					echo "\n".color("yellow","!] Claim Voc RIDE");
 					echo "\n".color("yellow","!] Please wait...");
 					for($a=1;$a<=3;$a++){
 						echo color("yellow",".");
 						sleep(1);
 					}
 					sleep(3);
-					$goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"AYOCOBAGOJEK"}');
+					$goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGORIDE"}');
 					$message1 = fetch_value($goride,'"message":"','"');
 					echo "\n".color("green","+] Message: ".$message1);
 							
-					echo "\n".color("yellow","!] Claim Voc ");
+					echo "\n".color("yellow","!] Claim Voc FOOD3");
 					echo "\n".color("yellow","!] Please wait...");
 					for($a=1;$a<=3;$a++){
 						echo color("yellow",".");
